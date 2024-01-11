@@ -23,4 +23,9 @@ public class DirectoryController {
 
         return new ResponseEntity<>(directoryService.createDirectory(name), HttpStatus.OK);
     }
+    @PostMapping("/create-pb")
+    public ResponseEntity<Boolean> createDirectoryPB(@RequestBody String name){
+
+        return new ResponseEntity<>(directoryService.createDirectoryPB(name), HttpStatus.OK);
+    }
 }
